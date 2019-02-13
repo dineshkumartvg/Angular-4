@@ -1,0 +1,14 @@
+course = { 
+			id : 1,
+			name : Angular,
+			date : '',
+			time : '',
+			price : 
+			imageurl : 
+			location : {
+				trainingRoom:
+				building :
+				city :
+				
+			}
+		 }
