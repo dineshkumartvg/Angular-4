@@ -1,0 +1,27 @@
+import { Component, Input,Output, EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'course-thubnail',
+  template : `<div  class="well hoverwell thumbnail">
+              <h2> {{tempCourse?.name}}</h2>
+            <div>Date : {{tempCourse?.date}}</div>
+            <div>Time : {{tempCourse?.time}}</div>
+            <div>Price : Rs {{tempCourse?.price}}</div>
+            <div>
+                <span>Location : {{tempCourse?.location?.trainingRoom}},</span>
+                <span class="pad-left">{{tempCourse?.location?.building}},</span>
+                <span>{{tempCourse?.location?.city}}</span>
+            </div>
+            <button class="btn btn-primary" (click)="tranferdatatoParent()" >Enroll</button>
+              `,
+})
+export class CourseThumbnailComponent {
+ @Input() tempCourse :any;
+ @Output() test =  new EventEmitter();
+ childcomponentvar : string = "hello";
+ tranferdatatoParent(){
+   this.test.emit(this.tempCourse.name)
+ }
+}
+
+<div [hidden]= "!tempCourse?.location">
