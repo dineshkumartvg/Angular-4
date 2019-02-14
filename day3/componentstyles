@@ -1,0 +1,8 @@
+<span class="pad-left">
+styles:[`.pad-left{margin-left: 10px;}
+		 .well div {color: #bbb;}`
+	   ]
+styleUrl
+styles:[`.pad-left{margin-left: 10px;}
+		 .well div {color: red;}`
+	   ]
