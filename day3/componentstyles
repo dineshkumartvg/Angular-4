@@ -6,3 +6,4 @@ styleUrl
 styles:[`.pad-left{margin-left: 10px;}
 		 .well div {color: red;}`
 	   ]
+<div  class="well hoverwell thumbnail">
