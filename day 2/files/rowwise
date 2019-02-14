@@ -1,0 +1,9 @@
+ `<div>
+  <h1>Upcoming Courses</h1>
+<hr/>
+<div class= "row">
+<div *ngFor="let course of courses"  class="col-md-5"> 
+<course-thumbnail  [tempCourse]= 'course' (outputCourse)='handleInParent($event)' ></course-thumbnail>
+</div>
+</div>
+`,
