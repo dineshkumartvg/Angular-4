@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CourseService } from '../shared/course.service';
+
+@Component({
+  templateUrl: './course-details.component.html',
+  styles: [`
+   .container { padding-left : 20px;padding-right : 20px;},
+   .course-image {height : 100px;} 
+   `]
+})
+export class CourseDetailComponent {
+  course : any;
+
+  constructor(private courseService: CourseService, private activatedRoute : ActivatedRoute  ) {
+  }
+
+  ngOnInit() {
+      this.course = this.courseService.getCourseById(+this.activatedRoute.snapshot.params['id'])
+  }
+}
