@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core';
+import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
+import { CourseService } from '../shared/course.service';
+
+@Injectable()
+export class CourseRouterActivatorService implements CanActivate {
+  constructor(private courseService: CourseService, private router: Router) {
+
+  }
+  canActivate(route: ActivatedRouteSnapshot) {
+    const courseExists = !!this.courseService.getCourseById(+route.params['id'])
+    if(!courseExists)
+      this.router.navigate(['/404'])
+    return courseExists
+  }
+}
