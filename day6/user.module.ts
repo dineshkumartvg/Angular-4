@@ -1,17 +1,15 @@
-import { CommonModule } from '@angular/common';
+import {  CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import {UserProfileComponent} from './userprofile.component'
-
+import {UserProfileComponent} from './user.profile.component'
 
 @NgModule({
+  declarations: [UserProfileComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(userRoutes)
-  ],
-  declarations: [
-    UserProfileComponent
     ],
-  providers: [],
-  })
+  providers : [],
+  exports: [
+    UserProfileComponent
+  ]
+ })
 export class UserModule { }
