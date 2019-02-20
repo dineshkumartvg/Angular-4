@@ -1,0 +1,33 @@
+import {Injectable} from '@angular/core';
+import {IUser} from './user.model'
+
+@Injectable()
+export class UserAuthenticateService {
+  user : IUser;
+
+  login(loginForm){
+      // this.user.userName = loginForm.userName;
+      // this.user.password = loginForm.password;
+      // this.user.firstName = 'Virtusa ';
+      // this.user.lastName = 'Angular';
+
+      this.user = {
+        password : loginForm.password,
+        userName: loginForm.userName,
+        firstName: 'Virtusa',
+        lastName: 'Angular'
+        }
+      }
+
+      updateUser(first : string, last : string){
+        this.user = {
+          password : 'test',
+          userName: 'test',
+          firstName: first,
+          lastName: last
+          }
+        }
+      isAuthenticated() {
+        return !!this.user
+      }
+}
