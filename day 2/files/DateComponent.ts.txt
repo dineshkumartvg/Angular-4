@@ -1,0 +1,9 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'currentdate',
+  template: '<h2>{{date}}</h2>'
+ })
+export class DateComponent {
+  date = new Date();
+}
