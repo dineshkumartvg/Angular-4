@@ -1,0 +1,28 @@
+import { Component } from '@angular/core';
+import {CourseService} from '../shared/course.service';
+import {Course} from '../shared/Course.model'
+@Component({
+  selector: 'course-list',
+  template: `<div>
+  <h1>Upcoming Courses</h1>
+  <hr/>
+  <div  class="well hoverwell thumbnail"
+  <h2>
+ Name : {{tempCourse.name | uppercase}}
+ </h2>
+<div>Date : {{tempCourse.date | date}} </div>
+<div>Time : {{tempCourse.time}} </div>
+<div>Price : {{tempCourse.price | currency:'INR'}} </div>
+<div>
+<span> Location :{{tempCourse.location.trainingRoom}},</span>
+<span> &nbsp;</span>
+<span>{{tempCourse.location.building}},{{tempCourse.location.city}}</span>
+</div>
+<div>
+</div>
+`
+})
+export class CourseListComponent {
+  
+
+}
